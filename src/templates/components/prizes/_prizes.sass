@@ -1,0 +1,220 @@
+.prizes
+    padding-top: rem(0px)
+    padding-bottom: rem(30px)
+    background: url('../img/prizes-bg.jpg') no-repeat 
+    background-size: cover
+    +min-screen($screen-sm)
+        padding-top: rem(165px)
+        padding-bottom: rem(70px)
+    &-list
+        &._desktop
+            display: none
+            +min-screen($screen-sm)
+                display: flex
+        &._mobile
+            display: block
+            +min-screen($screen-sm)
+                display: none
+        +min-screen($screen-sm)
+            display: flex
+            flex-wrap: wrap
+            justify-content: space-between
+            align-items: stretch
+        &-item
+            $parent: &
+            display: flex
+            flex-direction: column
+            padding-top: rem(45px)
+            +min-screen($screen-sm)
+                flex: 0 0 46%
+                padding-top: 0
+                margin-bottom: rem(53px)
+                &:nth-of-type(1),
+                &:nth-of-type(2),
+                &:nth-of-type(3)
+                    margin-bottom: rem(83px)
+                    
+                &:nth-of-type(1)
+                    #{$parent}
+                        &__img
+                            height: rem(303px)
+                            right: rem(20px)
+                            bottom: rem(-38px)
+                                
+                        &__scores
+                            left: 28%
+                                
+                &:nth-of-type(2)
+                    #{$parent}
+                        &__img
+                            right: rem(10px)
+                            height: rem(242px)
+                            bottom: rem(-30px)
+                        &__scores
+                            left: 30%
+                &:nth-of-type(3)
+                    margin-right: 14%
+                    flex: 0 0 20%
+                    #{$parent}
+                        &__img
+                            height: rem(275px)
+                            bottom: rem(-16px)
+                        &__scores
+                            left: 32%
+                &:nth-of-type(4)
+                    #{$parent}
+                        &__img
+                            height: rem(160px)
+                            bottom: rem(26px)
+                        &__scores
+                            left: 22%
+                &:nth-of-type(5)
+                    #{$parent}
+                        &__img
+                            height: rem(194px)
+                            right: rem(-10px)
+                            bottom: rem(26px)
+                        &__scores
+                            left: 31%
+                &:nth-of-type(6)
+                    #{$parent}
+                        &__img
+                            height: rem(272px)
+                            right: rem(5px)
+                            bottom: rem(-8px)
+                        &__scores
+                            left: 41%
+                &:nth-of-type(7)
+                    #{$parent}
+                        &__img
+                            height: rem(178px)
+                            right: rem(-10px)
+                            bottom: rem(15px)
+                        &__scores
+                            left: 27%
+                        &__text
+                            color: #ff003d
+            +min-screen($screen-md)
+                flex: 0 0 23%
+                margin-bottom: rem(53px)
+                &:nth-of-type(1)
+                    margin-left: 14%
+                &:nth-of-type(1),
+                &:nth-of-type(2),
+                &:nth-of-type(3)
+                    margin-bottom: rem(162px)
+                    #{$parent}
+                        &__img
+                            &-wrapper
+                                height: rem(215px)
+                &:nth-of-type(2)
+                    #{$parent}
+                        &__img
+                            bottom: 0
+                        &__scores
+                            left: 38%
+                    
+            &__title
+                font-size: rem(17px)
+                line-height: 1.25
+                text-transform: uppercase
+                span
+                    text-transform: none
+                +min-screen($screen-sm)
+                    font-size: rem(24px)
+                    font-family: "Gilroy-Bold"
+                    span
+                        display: block
+                        line-height: 1.6
+                        text-transform: none
+            &__text
+                font-size: rem(14px)
+                +min-screen($screen-sm)
+                    font-size: rem(24px)
+            &__img
+                position: absolute
+                bottom: 0
+                right: 0
+                max-height: 100%
+                max-width: 70%
+                object-fit: contain
+                +min-screen($screen-md)
+                    max-height: 155%
+                &-wrapper
+                    position: relative
+                    width: 100%
+                    height: rem(275px)
+                    margin-top: auto
+                    +min-screen($screen-md)
+                        height: rem(185px)
+            &__scores
+                position: absolute
+                bottom: 0
+                left: 27%
+                +size(rem(55px))
+                display: flex
+                align-items: center
+                justify-content: center
+                background: $orange
+                color: #FFF
+                font-size: rem(19px)
+                font-weight: 600
+                border-radius: 50%
+                box-shadow: 0 0 rem(3px) rgba(0,0,0,0.2)
+                +min-screen($screen-sm)
+                    +size(rem(64px))
+                    left: 45%
+                    font-size: rem(22px)
+                &._big
+                    +size(rem(70px))
+                    +min-screen($screen-sm)
+                        +size(rem(90px))
+                &._small
+                    font-size: rem(28px)
+                    +min-screen($screen-sm)
+                        font-size: rem(34px)
+        .slick-slide
+            .prizes-list-item
+                +min-screen(360px)
+                    width: 80% !important
+                    margin: auto
+                +min-screen($screen-sm)
+                    width: 100% 
+            &:nth-of-type(2)
+                .prizes-list-item
+                    &__scores 
+                        left: 25%
+            &:nth-of-type(4)
+                .prizes-list-item
+                    &__img
+                        bottom: rem(20px)
+                    &__scores 
+                        left: 20%
+            &:nth-of-type(5)
+                .prizes-list-item
+                    &__img
+                        bottom: rem(20px)
+                    &__scores 
+                        left: 23%
+            &:nth-of-type(6)
+                .prizes-list-item
+                    &__scores 
+                        left: 29%
+            &:nth-of-type(7)
+                .prizes-list-item
+                    &__img
+                        bottom: rem(20px)
+                    &__scores 
+                        left: 20%
+    &-slider-nav
+        display: flex
+        justify-content: space-between
+        +min-screen($screen-sm)
+            display: none
+        &__button
+            +size(rem(40px))
+            background: url('../img/arrow.svg') no-repeat center
+            background-size: contain
+            border: none
+            &._next
+                transform: rotate(-180deg)

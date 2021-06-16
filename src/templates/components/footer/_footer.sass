@@ -1,0 +1,75 @@
+.footer
+    padding-top: rem(40px)
+    background: #fff4e7
+    +min-screen($screen-sm)
+        padding-top: rem(98px)        
+    &__content,
+    &-form
+        display: flex
+        flex-direction: column
+        align-items: center
+    &__title
+        margin-bottom: rem(48px)
+        font-size: rem(27px)
+        line-height: 1.3
+        text-transform: uppercase
+        font-weight: normal
+        text-align: center
+        +min-screen($screen-sm)
+            width: 70%
+            margin: 0 auto
+            line-height: auto
+            margin-bottom: rem(22px)
+            font-size: rem(36px)
+        +min-screen($screen-md)
+            width: 100%
+    &-form
+        +min-screen($screen-sm)
+            padding-bottom: rem(25px)
+            padding-top: rem(40px)
+        &__input,
+        &__button
+            display: block
+            width: rem(300px)
+            margin: 0 auto
+            max-width: 100%
+            font-family: "Gilroy"
+            +min-screen($screen-sm)
+                width: rem(360px)
+        &__input
+            height: rem(53px)
+            margin-bottom: rem(27px)
+            padding: 0 rem(24px)
+            font-size: rem(16px)
+            border: 1px solid #a8a8a8
+            box-shadow: none
+            appearance: none
+            -moz-appearance: none
+            -webkit-appearance: none
+            border-radius: 0px
+            background: #FFF
+            &::placeholder
+                color: #000
+            +min-screen($screen-sm)
+                margin-bottom: rem(32px)
+        &__button
+            margin-bottom: rem(40px)
+            font-size: rem(16px)
+            +min-screen($screen-sm)
+                margin-bottom: rem(86px)
+                font-size: rem(18px)
+    &__image
+        display: none
+        height: rem(350px)
+        margin-left: rem(80px)
+        +min-screen($screen-sm)
+            display: block
+    &__apps
+        +max-screen($screen-xs)
+            width: calc(100% + #{$indent-col-xs} * 2)
+            margin-left: rem(-$indent-col-xs)
+            align-items: center
+            padding-top: rem(30px)
+            padding-bottom: rem(35px)
+            background: #FFF
+        

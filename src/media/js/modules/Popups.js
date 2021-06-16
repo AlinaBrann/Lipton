@@ -22,7 +22,7 @@ function Popups() {
 	this.activePopupName = '';
 
 	let self = this;
-	// self.open('round-finished');
+	// self.open('info');
 	dom.$body.on('click', '[data-popup-opener]', function(e) {
 		e.preventDefault();
 

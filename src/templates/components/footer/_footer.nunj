@@ -1,0 +1,25 @@
+{% from "../apps/_apps.nunj" import apps %}
+
+<footer class="footer">
+    <div class="container">
+        <div class="footer__content">
+            <h2 class="footer__title">{{ footerTitle }}</h2>
+            <div class="flex">
+                <form action="" class="footer-form">
+                    <input type="tel" class="footer-form__input" max="15" placeholder="{{ inputPlaceholder }}">
+                    {{ button({
+                        text: formButtonText,
+                        type: "button",
+                        attr: "data-popup-opener='info'",
+                        className: "footer-form__button"
+                    })}}
+                    {{ apps({
+                        class: "footer__apps _orange"
+                    })}}
+                </form>
+                <img src="media/img/phone.png" class="footer__image" alt="">
+            </div>
+            
+        </div>
+    </div>
+</footer>

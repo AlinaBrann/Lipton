@@ -1,0 +1,16 @@
+<div class="popups-wrapper">
+	<div class="popups-wrapper__content">
+
+		<div class="popup" data-popup="info">
+			<div class="popup__close _grey" data-popup-closer>
+				<img src="media/img/close.svg" alt="">
+			</div>
+			<div class="popup__content">
+				<div class="popup__text">{{ popupText }}</div>
+			</div>
+		</div>
+
+
+	</div>
+
+</div>

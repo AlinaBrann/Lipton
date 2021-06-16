@@ -1,0 +1,12 @@
+{% macro apps(props) %}
+    <ul class="apps{% if props.class %} {{ props.class }}{% endif %}">
+        {% for item in appsList %}
+            <li class="apps-item">
+                <a href="{{ item.link }}" class="apps-item__link" target="_blank">
+                    <img src="media/img/{{ item.name }}" class="apps-item__icon" alt="">
+                    <div class="apps-item__text">{{ item.text }}</div>
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+{% endmacro %}

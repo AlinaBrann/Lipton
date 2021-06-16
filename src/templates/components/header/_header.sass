@@ -1,33 +1,41 @@
-.wrapper__header
+.header
 	position: absolute
 	top: 0
 	left: 0
-	display: block
 	width: 100%
-.header
-	display: flex
-	width: 100%
-	align-items: flex-start
-	justify-content: space-between
-	padding: rem(20px) rem(11px) rem(20px) rem(15px)
-	font-size: rem(37px)
-	text-transform: uppercase
-	letter-spacing: 0.49px  
-	box-sizing: border-box
-	+max-screen($screen-sm)
-		padding-right: rem(18px)
-	&__logo
-		display: block
-		height: rem(30px)
-	&__contact
-		border-bottom: 3px solid transparent
-		@extend .transition
-		&:hover
-			border-color: currentColor 
-			@extend .transition-hover 
-		+max-screen($screen-sm)
-			width: rem(39px)
-			height: rem(23px)
-			font-size: 0
-			background: url('/media/img/MailPhenom.svg') no-repeat center
-			background-size: contain
+	padding: rem(12px) 0  rem(3px)
+	background: rgba(255,255,255,.46)
+	font-family: "Gilroy-Bold"
+	+min-screen($screen-sm)
+		padding: rem(14px) 0 rem(17px)
+	.container
+		width: rem(1810px)
+		max-width: 100%	
+	&-list
+		display: flex
+		width: 100%	
+		align-items: center
+		justify-content: center
+		margin-bottom: rem(15px)
+		+min-screen($screen-sm)
+			margin-bottom: 0
+			justify-content: flex-start
+		&__item
+			height: rem(64px)
+			&:not(:last-of-type)
+				margin-right: rem(21px)
+			img
+				display: block
+				height: 100%	
+				object-fit: contain
+	&-rules
+		margin: auto
+		text-transform: uppercase
+		font-size: rem(18px)
+		line-height: 2
+		+min-screen($screen-sm)
+			margin: 0
+			margin-left: auto
+			text-transform: none
+			font-size: rem(24px)
+			line-height: 1

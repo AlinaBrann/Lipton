@@ -1,0 +1,36 @@
+<section class="prizes" data-slider="prizes">
+    <div class="container">
+        <ul class="prizes-list _mobile" data-slider-slides>
+            {% for item in prizes %}
+                <li class="prizes-list-item">
+                    <div class="prizes-list-item__title">{{ item.title }}</div>
+                    {% if item.text %}
+                        <div class="prizes-list-item__text">{{ item.text }}</div>
+                    {% endif %}
+                    <div class="prizes-list-item__img-wrapper">
+                        <img src="media/img/{{ item.img }}" alt="{{ item.title }}" class="prizes-list-item__img">
+                        <div class="prizes-list-item__scores{% if item.scores.length > 4 %} _big{% endif %} {% if item.scores.length < 2 %} _small{% endif %}">{{ item.scores }}</div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+        <ul class="prizes-list _desktop">
+            {% for item in prizes %}
+                <li class="prizes-list-item">
+                    <div class="prizes-list-item__title">{{ item.title }}</div>
+                    {% if item.text %}
+                        <div class="prizes-list-item__text">{{ item.text }}</div>
+                    {% endif %}
+                    <div class="prizes-list-item__img-wrapper">
+                        <img src="media/img/{{ item.img }}" alt="{{ item.title }}" class="prizes-list-item__img">
+                        <div class="prizes-list-item__scores{% if item.scores.length > 4 %} _big{% endif %} {% if item.scores.length < 2 %} _small{% endif %}">{{ item.scores }}</div>
+                    </div>
+                </li>
+            {% endfor %}
+        </ul>
+        <div class="prizes-slider-nav">
+            <button class="prizes-slider-nav__button _prev" data-slider-prev></button>
+            <button class="prizes-slider-nav__button _next" data-slider-next></button>
+        </div>
+    </div>
+</section>

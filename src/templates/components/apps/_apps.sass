@@ -1,0 +1,37 @@
+.apps
+    display: flex
+    align-items: stretch
+    flex-direction: column
+    +min-screen($screen-sm)
+        flex-direction: row
+    &-item
+        &:not(:last-of-type)
+            margin-bottom: rem(28px)
+            +min-screen($screen-sm)   
+                margin-right: rem(30px)
+                margin-bottom: 0
+        &__link
+            display: flex
+            align-items: center
+            +size(rem(165px),rem(53px))
+            padding: rem(9px) rem(5px) rem(9px) rem(9px)
+            border: 4px solid $orange
+            border-radius: rem(7px)
+            box-shadow: 0 0 rem(13px) rgba(0,0,0,.2)
+            ._orange &
+                background: $orange
+                color: #FFF
+                box-shadow: none
+        &__icon
+            height: rem(33px)
+            object-fit: contain
+            margin-right: rem(4px)
+            ._orange &
+                filter: invert(1)
+        &__text
+            font-size: rem(18px)
+            line-height: 1
+            +min-screen($screen-md)  
+                font-size: rem(17px)
+            +min-screen($screen-lg)  
+                font-size: rem(18px) 

@@ -4,6 +4,8 @@ global.TweenMax = TweenMax;
 global.$ = global.jQuery = require('jquery');
 global.Draggable = Draggable;
 require('./utils/jqExtensions');
+require('slick-carousel');
+import Inputmask from 'inputmask';
 
 // prettier-ignore
 global.ProjectName = new function ProjectName() { // eslint-disable-line
@@ -17,10 +19,8 @@ global.ProjectName = new function ProjectName() { // eslint-disable-line
 
 	this.helpers = {};
 	this.modules = {
-		Select: require('./modules/Select'),
 		Popups: require('./modules/Popups'),
-		Inputs: require('./modules/Inputs'),
-		Tabs: require('./modules/Tabs'),
+		SlickSliders: require('./modules/SlickSlider'),
 	};
 
 	// Startup
@@ -29,19 +29,12 @@ global.ProjectName = new function ProjectName() { // eslint-disable-line
 		this.dom.$html.removeClass('_loading');
 	
 
-		var menu = $('.header-menu-button');
-		var players = $('.header-players-button');
-		var close = $('.header-menu-close')
-		menu.on('click', function(){
-			$(this).parents('.header').toggleClass('_menu-opened');
+		var selector = document.getElementsByClassName("footer-form__input");
+		var im = new Inputmask({
+			mask: "+9(999) 999-99-99",
+			showMaskOnHover: false
 		});
-		players.on('click', function(){
-			$(this).parents('.header').toggleClass('_players-opened');
-		});
-		close.on('click', function(){
-			$(this).parents('.header').removeClass('_menu-opened _players-opened');
-		});
-		
+		im.mask(selector);
 		
 	});
 }();
